@@ -37,15 +37,37 @@ Vor dem Live-Gang bitte die Platzhalter ersetzen:
 
 | Stelle | Was anpassen |
 |--------|--------------|
-| `index.html` – Footer | Impressum- und Datenschutz-Links (rechtlich Pflicht) |
-| `assets/img/` | Echte Fotos hochladen, siehe `assets/img/NAMING.md` |
+| `impressum.html` / `datenschutz.html` | Mit `[…]` markierte Angaben ergänzen – v. a. **Name der Inhaberin/​des Inhabers** (Pflicht) |
+| `index.html` – Kontaktformular | Formspree-Endpoint aktivieren (siehe unten) |
 | `index.html` – Kontakt | Öffnungszeiten ergänzen, sobald bekannt |
 
-Telefon, E-Mail, Adresse, Instagram und die Google-Bewertung sind bereits mit den
-echten Daten eingetragen. Das Kontaktformular sendet an `info@djpaletten.de`.
+Telefon, E-Mail, Adresse, Instagram, Logo, Fotos und die Google-Bewertung sind bereits
+mit den echten Daten eingetragen.
 
 Farben zentral über die CSS-Variablen in `:root` (`css/style.css`):
 Anthrazit (`--charcoal`), Gold (`--gold`) und Holztöne (`--wood`).
+
+## Kontaktformular aktivieren (Formspree)
+
+Das Formular verschickt Anfragen ohne eigenen Server über den kostenlosen Dienst
+[Formspree](https://formspree.io). Aktivierung (einmalig, ~2 Min.):
+
+1. Kostenloses Konto auf formspree.io anlegen und ein neues Formular erstellen
+   (Zieladresse: `info@djpaletten.de`).
+2. Man erhält einen Endpoint wie `https://formspree.io/f/abcdwxyz`.
+3. In `index.html` im `<form … action="https://formspree.io/f/xxxxxxxx">` das
+   `xxxxxxxx` durch die echte Form-ID ersetzen.
+
+Solange dort noch `xxxxxxxx` steht, öffnet das Formular als Rückfallebene das
+E-Mail-Programm des Besuchers (Mail an `info@djpaletten.de`). Sobald ein echter
+Endpoint eingetragen ist, wird direkt und ohne Seitenwechsel versendet.
+
+## Rechtsseiten
+
+`impressum.html` und `datenschutz.html` sind angelegt und im Footer verlinkt. Die
+Datenschutzerklärung deckt Hosting (GitHub Pages), das Kontaktformular (Formspree)
+und die Google-Maps-Karte ab. **Vor dem Live-Gang** die `[…]`-Platzhalter ausfüllen;
+bei rechtlicher Unsicherheit anwaltlich prüfen lassen.
 
 ## GitHub Pages
 
