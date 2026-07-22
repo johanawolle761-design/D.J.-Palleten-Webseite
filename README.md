@@ -1,7 +1,14 @@
-# D.J. Palleten – Webseite
+# D.J. Paletten – Webseite
 
-Moderne, responsive Single-Page-Webseite für das Paletten-Unternehmen **D.J. Palleten**
-(An- & Verkauf, Reparatur und Recycling von Paletten).
+Moderne, responsive Single-Page-Webseite für **D.J. Paletten** in Rhede
+(Handel, An- & Verkauf, Recycling, Sonderpalettenbau, Service und Entsorgung).
+
+Verifizierte Firmendaten (Stand: Google-Eintrag):
+
+- Adresse: Krommerter Weg 59, 46414 Rhede (Westfalen)
+- Telefon: 0178 6591425
+- Instagram: [@paletten_liebe_](https://www.instagram.com/paletten_liebe_/)
+- Bewertung: 5,0 Sterne bei Google (11 Rezensionen)
 
 ## Inhalt
 
@@ -26,10 +33,11 @@ Vor dem Live-Gang bitte die Platzhalter ersetzen:
 
 | Stelle | Was anpassen |
 |--------|--------------|
-| `index.html` – Abschnitt Kontakt | Telefonnummer, E-Mail, Adresse, Öffnungszeiten |
-| `index.html` – Footer | Impressum- und Datenschutz-Links |
-| `js/main.js` | E-Mail-Empfänger im Kontaktformular (`info@dj-palleten.de`) |
-| Kennzahlen (Hero / Über uns) | An reale Werte des Unternehmens anpassen |
+| `index.html` – Footer | Impressum- und Datenschutz-Links (rechtlich Pflicht) |
+| `js/main.js` | `RECIPIENT` mit der Firmen-E-Mail füllen. Solange leer, verweist das Formular auf die Telefonnummer. |
+| `index.html` – Kontakt | Öffnungszeiten ergänzen, sobald bekannt |
+
+Telefon, Adresse, Instagram und die Google-Bewertung sind bereits mit den echten Daten eingetragen.
 
 Farben lassen sich zentral über die CSS-Variablen in `:root` (in `css/style.css`) ändern.
 

@@ -199,6 +199,17 @@ h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); }
 .stat strong { display: block; font-size: 1.9rem; color: var(--green); }
 .stat span { color: var(--muted); font-size: .9rem; }
 
+/* ---------- Standort / Karte ---------- */
+.map-wrap {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  line-height: 0;
+}
+.map-wrap iframe { display: block; width: 100%; }
+.map-link { text-align: center; margin: 1rem 0 0; font-weight: 600; }
+
 /* ---------- Contact ---------- */
 .section-contact { background: var(--bg-alt); }
 .contact-inner { display: grid; grid-template-columns: .9fr 1.1fr; gap: 3rem; align-items: start; }
