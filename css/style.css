@@ -89,11 +89,13 @@ h3 { font-weight: 600; }
 
 .logo { display: flex; align-items: center; gap: .7rem; color: #fff; }
 .logo:hover { color: #fff; }
-.logo-mark { width: 46px; height: 38px; flex: none; }
-.logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+.logo-img { height: 54px; width: auto; display: none; }
+.logo-fallback { display: flex; align-items: center; gap: .7rem; }
+.logo-mark { width: 48px; height: 38px; flex: none; }
+.logo-text { display: flex; flex-direction: column; line-height: 1.15; }
 .logo-name {
-  font-size: 1.28rem; font-weight: 600; color: var(--gold);
-  letter-spacing: .12em; text-transform: uppercase;
+  font-size: 1.3rem; font-weight: 400; color: var(--gold);
+  letter-spacing: .2em; text-transform: uppercase;
 }
 .logo-tag {
   font-size: .64rem; letter-spacing: .16em; text-transform: uppercase;
@@ -114,13 +116,21 @@ h3 { font-weight: 600; }
 .hero {
   position: relative;
   color: #fff;
+  overflow: hidden;
   background:
-    linear-gradient(180deg, rgba(28, 27, 23, 0.86) 0%, rgba(28, 27, 23, 0.92) 100%),
+    radial-gradient(760px 440px at 82% 4%, rgba(200, 162, 103, 0.22), transparent 62%),
+    linear-gradient(180deg, rgba(28, 27, 23, 0.80) 0%, rgba(18, 17, 14, 0.95) 100%),
     url("../assets/img/lager-europaletten.jpg") center/cover no-repeat,
     var(--charcoal);
   padding: clamp(4rem, 10vw, 7.5rem) 0;
 }
-.hero-inner { max-width: 760px; }
+.hero::before {
+  content: ""; position: absolute; right: -70px; top: 50%;
+  transform: translateY(-50%) rotate(-8deg);
+  width: 300px; height: 240px; opacity: 0.10; pointer-events: none;
+  background: repeating-linear-gradient(0deg, var(--gold) 0 14px, transparent 14px 34px);
+}
+.hero-inner { position: relative; z-index: 1; max-width: 760px; }
 .hero h1 { color: #fff; }
 .hero h1 .accent { color: var(--gold); }
 .hero-lead { font-size: 1.18rem; color: #d9d3c8; max-width: 46ch; margin-top: 1.2rem; }
@@ -175,7 +185,8 @@ h3 { font-weight: 600; }
 }
 .gallery-item {
   margin: 0; border-radius: var(--radius); overflow: hidden; position: relative;
-  background: linear-gradient(135deg, #cba876 0%, #9a6f3c 100%);
+  background: linear-gradient(135deg, #322e27 0%, #453d31 100%);
+  border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
 }
 .gallery-item.wide { grid-column: span 2; grid-row: span 2; }
@@ -195,26 +206,31 @@ h3 { font-weight: 600; }
 /* Fallback, wenn ein Foto (noch) fehlt: dezenter Platzhalter statt kaputtem Bild */
 .gallery-item.img-missing::before {
   content: "Foto folgt"; position: absolute; inset: 0;
-  display: grid; place-items: center; color: rgba(255,255,255,.85);
-  font-size: .9rem; letter-spacing: .05em; text-transform: uppercase;
+  display: grid; place-items: center; color: rgba(200, 162, 103, .85);
+  font-size: .82rem; letter-spacing: .14em; text-transform: uppercase;
 }
 
 /* ---------- Steps ---------- */
 .steps {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem;
-  list-style: none; margin: 0; padding: 0;
+  position: relative;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem;
+  list-style: none; margin: 0; padding: 0; counter-reset: step;
+  max-width: 940px; margin-inline: auto;
 }
-.step {
-  background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 2.2rem 1.7rem; text-align: center; box-shadow: var(--shadow-sm);
+.steps::before {
+  content: ""; position: absolute; top: 28px; left: 18%; right: 18%; height: 2px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-dark));
+  opacity: .45; z-index: 0;
 }
+.step { position: relative; z-index: 1; text-align: center; padding: 0 .8rem; }
 .step-num {
-  display: grid; place-items: center; width: 54px; height: 54px; margin: 0 auto 1.1rem;
+  display: grid; place-items: center; width: 56px; height: 56px; margin: 0 auto 1.2rem;
   background: var(--charcoal); color: var(--gold); font-weight: 700; font-size: 1.35rem;
   border-radius: 50%; border: 2px solid var(--gold);
+  box-shadow: 0 0 0 8px #fff;
 }
 .step h3 { font-size: 1.18rem; }
-.step p { color: var(--muted); margin: 0; }
+.step p { color: var(--muted); margin: 0; font-size: .98rem; }
 
 /* ---------- About ---------- */
 .about-inner { display: grid; grid-template-columns: 1.2fr .8fr; gap: 3.2rem; align-items: center; }
@@ -243,12 +259,15 @@ h3 { font-weight: 600; }
 .map-link { text-align: center; margin: 1.1rem 0 0; font-weight: 600; }
 
 /* ---------- Contact ---------- */
-.section-contact { background: var(--charcoal); color: #ece6da; }
+.section-contact { background: var(--charcoal); color: #ece6da; padding: clamp(3rem, 6vw, 4.5rem) 0; }
 .section-contact .eyebrow { color: var(--gold); }
 .section-contact h2 { color: #fff; }
-.contact-inner { display: grid; grid-template-columns: .9fr 1.1fr; gap: 3.2rem; align-items: start; }
-.contact-list { list-style: none; margin: 1.8rem 0 0; padding: 0; }
-.contact-list li { display: flex; flex-direction: column; margin-bottom: 1.2rem; }
+.contact-inner {
+  display: grid; grid-template-columns: .85fr 1fr; gap: 2.4rem; align-items: start;
+  max-width: 980px; margin-inline: auto;
+}
+.contact-list { list-style: none; margin: 1.4rem 0 0; padding: 0; }
+.contact-list li { display: flex; flex-direction: column; margin-bottom: .9rem; }
 .contact-label {
   font-size: .74rem; text-transform: uppercase; letter-spacing: .12em;
   color: var(--gold); font-weight: 700;
@@ -258,13 +277,13 @@ h3 { font-weight: 600; }
 
 .contact-form {
   background: var(--cream); border-radius: var(--radius);
-  padding: 2.2rem; box-shadow: var(--shadow);
+  padding: 1.7rem; box-shadow: var(--shadow);
 }
-.field { margin-bottom: 1.1rem; display: flex; flex-direction: column; }
-.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.field label { font-weight: 600; font-size: .9rem; margin-bottom: .35rem; color: var(--ink); }
+.field { margin-bottom: .85rem; display: flex; flex-direction: column; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+.field label { font-weight: 600; font-size: .85rem; margin-bottom: .3rem; color: var(--ink); }
 .field input, .field select, .field textarea {
-  font: inherit; padding: .8rem .95rem; color: var(--ink);
+  font: inherit; font-size: .95rem; padding: .65rem .85rem; color: var(--ink);
   border: 1px solid var(--border); border-radius: 10px; background: #fff;
   transition: border-color .15s ease, box-shadow .15s ease;
 }
@@ -305,7 +324,10 @@ h3 { font-weight: 600; }
   .cards { grid-template-columns: repeat(2, 1fr); }
   .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 190px; }
   .gallery-item.wide { grid-column: span 2; grid-row: span 1; }
-  .steps { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; gap: 1.8rem; }
+  .steps::before { display: none; }
+  .step-num { box-shadow: none; }
+  .hero::before { display: none; }
   .about-inner, .contact-inner { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; gap: 1.6rem; }
 }

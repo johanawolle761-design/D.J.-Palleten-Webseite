@@ -10,6 +10,19 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // Logo: echtes logo.png verwenden, sobald es hochgeladen ist – sonst SVG-Ersatzlogo.
+  var logoImg = document.querySelector(".logo-img");
+  var logoFallback = document.querySelector(".logo-fallback");
+  if (logoImg && logoFallback) {
+    logoImg.addEventListener("load", function () {
+      logoImg.style.display = "block";
+      logoFallback.style.display = "none";
+    });
+    logoImg.addEventListener("error", function () {
+      logoImg.remove();
+    });
+  }
+
   // Mobile-Navigation
   var toggle = document.querySelector(".nav-toggle");
   var navList = document.getElementById("nav-list");
