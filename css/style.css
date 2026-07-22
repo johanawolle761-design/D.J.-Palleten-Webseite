@@ -109,6 +109,16 @@ h3 { font-weight: 600; }
 .nav-cta:hover { background: var(--gold-bright); }
 .nav-toggle { display: none; }
 
+.header-right { display: flex; align-items: center; gap: 1.1rem; }
+.lang-switch { display: flex; flex: none; border: 1px solid rgba(200, 162, 103, 0.5); border-radius: 999px; overflow: hidden; }
+.lang-switch button {
+  background: transparent; color: #e9e2d6; border: none; cursor: pointer;
+  padding: .38rem .7rem; font: inherit; font-size: .82rem; font-weight: 700; letter-spacing: .04em;
+  transition: background .2s ease, color .2s ease;
+}
+.lang-switch button.active { background: var(--gold); color: var(--charcoal); }
+.lang-switch button:not(.active):hover { color: var(--gold); }
+
 /* ---------- Hero ---------- */
 .hero { position: relative; color: #fff; overflow: hidden; padding: clamp(4.5rem, 11vw, 8.5rem) 0 clamp(4rem, 8vw, 6rem); }
 .hero-bg {

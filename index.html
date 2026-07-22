@@ -11,7 +11,7 @@
   <meta property="og:image" content="assets/img/lager-europaletten.jpg" />
   <title>D.J. Paletten Rhede – Handel · Reparatur · Service</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%2326241f'/%3E%3Crect x='20' y='40' width='60' height='12' rx='2' fill='%23c8a267'/%3E%3Crect x='20' y='54' width='60' height='10' rx='2' fill='%238a5a2b'/%3E%3Crect x='22' y='64' width='12' height='12' fill='%236e4620'/%3E%3Crect x='44' y='64' width='12' height='12' fill='%236e4620'/%3E%3Crect x='66' y='64' width='12' height='12' fill='%236e4620'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%2326241f'/%3E%3Crect x='20' y='40' width='60' height='12' rx='2' fill='%23c8a267'/%3E%3Crect x='20' y='54' width='60' height='10' rx='2' fill='%23c8a267'/%3E%3Crect x='22' y='64' width='12' height='12' fill='%23c8a267'/%3E%3Crect x='44' y='64' width='12' height='12' fill='%23c8a267'/%3E%3Crect x='66' y='64' width='12' height='12' fill='%23c8a267'/%3E%3C/svg%3E" />
 
   <script type="application/ld+json">
   {
@@ -30,16 +30,12 @@
       "addressRegion": "Nordrhein-Westfalen",
       "addressCountry": "DE"
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "11"
-    }
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "11" }
   }
   </script>
 </head>
 <body>
-  <a href="#leistungen" class="skip-link">Zum Inhalt springen</a>
+  <a href="#leistungen" class="skip-link" data-i18n="skip">Zum Inhalt springen</a>
 
   <!-- Header -->
   <header class="site-header" id="top">
@@ -49,10 +45,10 @@
         <span class="logo-fallback">
           <svg class="logo-mark" viewBox="0 0 64 48" role="img" aria-hidden="true" focusable="false">
             <path d="M7 13 L55 7 L55 17 L7 23 Z" fill="#c8a267" />
-            <path d="M7 24 L55 24 L55 32 L7 32 Z" fill="#9a6a34" />
-            <rect x="8" y="32" width="9" height="10" fill="#6e4620" />
-            <rect x="27" y="32" width="9" height="10" fill="#6e4620" />
-            <rect x="46" y="32" width="9" height="10" fill="#6e4620" />
+            <path d="M7 24 L55 24 L55 32 L7 32 Z" fill="#c8a267" />
+            <rect x="8" y="32" width="9" height="10" fill="#c8a267" />
+            <rect x="27" y="32" width="9" height="10" fill="#c8a267" />
+            <rect x="46" y="32" width="9" height="10" fill="#c8a267" />
           </svg>
           <span class="logo-text">
             <span class="logo-name">D.J. Paletten</span>
@@ -61,19 +57,25 @@
         </span>
       </a>
 
-      <nav class="main-nav" aria-label="Hauptnavigation">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Menü öffnen">
-          <span></span><span></span><span></span>
-        </button>
-        <ul id="nav-list" class="nav-list">
-          <li><a href="#leistungen">Leistungen</a></li>
-          <li><a href="#galerie">Galerie</a></li>
-          <li><a href="#ueber-uns">Über uns</a></li>
-          <li><a href="#standort">Standort</a></li>
-          <li><a href="tel:+4915786591425" class="nav-phone">01578 6591425</a></li>
-          <li><a href="#kontakt" class="nav-cta">Angebot anfragen</a></li>
-        </ul>
-      </nav>
+      <div class="header-right">
+        <div class="lang-switch" role="group" aria-label="Sprache / Language">
+          <button type="button" data-lang="de" class="active">DE</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <nav class="main-nav" aria-label="Hauptnavigation">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Menü öffnen">
+            <span></span><span></span><span></span>
+          </button>
+          <ul id="nav-list" class="nav-list">
+            <li><a href="#leistungen" data-i18n="nav.services">Leistungen</a></li>
+            <li><a href="#galerie" data-i18n="nav.gallery">Galerie</a></li>
+            <li><a href="#ueber-uns" data-i18n="nav.about">Über uns</a></li>
+            <li><a href="#standort" data-i18n="nav.location">Standort</a></li>
+            <li><a href="tel:+4915786591425" class="nav-phone">01578 6591425</a></li>
+            <li><a href="#kontakt" class="nav-cta" data-i18n="nav.cta">Angebot anfragen</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -82,21 +84,21 @@
     <section class="hero">
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="container hero-inner">
-        <span class="hero-badge">★ 5,0 bei Google · 11 Rezensionen</span>
-        <h1>Paletten in besten <span class="accent">Händen</span>.</h1>
-        <p class="hero-lead">
+        <span class="hero-badge" data-i18n="hero.badge">★ 5,0 bei Google · 11 Rezensionen</span>
+        <h1><span data-i18n="hero.h1a">Paletten in besten </span><span class="accent" data-i18n="hero.h1b">Händen</span>.</h1>
+        <p class="hero-lead" data-i18n="hero.lead">
           Ihr Partner in Rhede für An- &amp; Verkauf, Sonderpalettenbau, Recycling und
           Entsorgung – zu fairen Preisen, mit zuverlässigem Service und persönlicher Beratung.
         </p>
         <div class="hero-actions">
-          <a href="#kontakt" class="btn btn-primary">Kostenloses Angebot anfragen</a>
+          <a href="#kontakt" class="btn btn-primary" data-i18n="hero.btnQuote">Kostenloses Angebot anfragen</a>
           <a href="tel:+4915786591425" class="btn btn-ghost">📞 01578 6591425</a>
         </div>
         <ul class="hero-usp">
-          <li>An- &amp; Verkauf</li>
-          <li>Sonderpalettenbau</li>
-          <li>Recycling &amp; Entsorgung</li>
-          <li>Deutschlandweit</li>
+          <li data-i18n="hero.usp1">An- &amp; Verkauf</li>
+          <li data-i18n="hero.usp2">Sonderpalettenbau</li>
+          <li data-i18n="hero.usp3">Recycling &amp; Entsorgung</li>
+          <li data-i18n="hero.usp4">Deutschlandweit</li>
         </ul>
       </div>
       <a href="#leistungen" class="hero-scroll" aria-label="Nach unten scrollen"><span></span></a>
@@ -106,9 +108,9 @@
     <section id="leistungen" class="section">
       <div class="container">
         <header class="section-head reveal">
-          <p class="eyebrow">Leistungen</p>
-          <h2>Alles rund um Ihre Paletten</h2>
-          <p class="section-sub">
+          <p class="eyebrow" data-i18n="services.eyebrow">Leistungen</p>
+          <h2 data-i18n="services.h2">Alles rund um Ihre Paletten</h2>
+          <p class="section-sub" data-i18n="services.sub">
             Ob Sie Paletten loswerden, beschaffen oder eine Sonderanfertigung benötigen –
             bei D.J. Paletten bekommen Sie die passende Lösung aus einer Hand.
           </p>
@@ -117,33 +119,33 @@
         <div class="cards">
           <article class="card reveal">
             <span class="card-icon">🔄</span>
-            <h3>An- &amp; Verkauf</h3>
-            <p>Wir kaufen und verkaufen Europaletten, Einwegpaletten und Sonderformate – auch in großen Mengen.</p>
+            <h3 data-i18n="card1.t">An- &amp; Verkauf</h3>
+            <p data-i18n="card1.d">Wir kaufen und verkaufen Europaletten, Einwegpaletten und Sonderformate – auch in großen Mengen.</p>
           </article>
           <article class="card reveal">
             <span class="card-icon">📦</span>
-            <h3>Palettenhandel</h3>
-            <p>Neue und aufgearbeitete Paletten in geprüfter Qualität, kurzfristig verfügbar zu fairen Konditionen.</p>
+            <h3 data-i18n="card2.t">Palettenhandel</h3>
+            <p data-i18n="card2.d">Neue und aufgearbeitete Paletten in geprüfter Qualität, kurzfristig verfügbar zu fairen Konditionen.</p>
           </article>
           <article class="card reveal">
             <span class="card-icon">🛠️</span>
-            <h3>Sonderpalettenbau</h3>
-            <p>Individuelle Palettenmaße und Sonderanfertigungen nach Ihren Vorgaben – passgenau gefertigt.</p>
+            <h3 data-i18n="card3.t">Sonderpalettenbau</h3>
+            <p data-i18n="card3.d">Individuelle Palettenmaße und Sonderanfertigungen nach Ihren Vorgaben – passgenau gefertigt.</p>
           </article>
           <article class="card reveal">
             <span class="card-icon">♻️</span>
-            <h3>Reparatur &amp; Recycling</h3>
-            <p>Beschädigte Paletten werden fachgerecht instand gesetzt und zurück in den Kreislauf geführt.</p>
+            <h3 data-i18n="card4.t">Reparatur &amp; Recycling</h3>
+            <p data-i18n="card4.d">Beschädigte Paletten werden fachgerecht instand gesetzt und zurück in den Kreislauf geführt.</p>
           </article>
           <article class="card reveal">
             <span class="card-icon">🗑️</span>
-            <h3>Entsorgung</h3>
-            <p>Nicht mehr verwendbare Paletten entsorgen wir umweltgerecht und nachhaltig für Sie.</p>
+            <h3 data-i18n="card5.t">Entsorgung</h3>
+            <p data-i18n="card5.d">Nicht mehr verwendbare Paletten entsorgen wir umweltgerecht und nachhaltig für Sie.</p>
           </article>
           <article class="card reveal">
             <span class="card-icon">🚚</span>
-            <h3>Service &amp; Abholung</h3>
-            <p>Zuverlässiger Service und Abholung Ihrer Paletten – schnell und unkompliziert.</p>
+            <h3 data-i18n="card6.t">Service &amp; Abholung</h3>
+            <p data-i18n="card6.d">Zuverlässiger Service und Abholung Ihrer Paletten – schnell und unkompliziert.</p>
           </article>
         </div>
       </div>
@@ -152,10 +154,10 @@
     <!-- Kennzahlen -->
     <section class="stats-band">
       <div class="container stats-inner">
-        <div class="stat reveal"><strong>5,0 ★</strong><span>Google-Bewertung</span></div>
-        <div class="stat reveal"><strong>11</strong><span>Rezensionen</span></div>
-        <div class="stat reveal"><strong>Rhede</strong><span>Standort Westfalen</span></div>
-        <div class="stat reveal"><strong>nach Maß</strong><span>Sonderpalettenbau</span></div>
+        <div class="stat reveal"><strong>5,0 ★</strong><span data-i18n="stats1">Google-Bewertung</span></div>
+        <div class="stat reveal"><strong>11</strong><span data-i18n="stats2">Rezensionen</span></div>
+        <div class="stat reveal"><strong>Rhede</strong><span data-i18n="stats3">Standort Westfalen</span></div>
+        <div class="stat reveal"><strong data-i18n="stats4v">nach Maß</strong><span data-i18n="stats4">Sonderpalettenbau</span></div>
       </div>
     </section>
 
@@ -163,28 +165,28 @@
     <section id="galerie" class="section section-alt">
       <div class="container">
         <header class="section-head reveal">
-          <p class="eyebrow">Galerie</p>
-          <h2>Einblicke in unseren Betrieb</h2>
-          <p class="section-sub">Vom sortierten Palettenlager bis zum Sonderpalettenbau in Rhede.</p>
+          <p class="eyebrow" data-i18n="gallery.eyebrow">Galerie</p>
+          <h2 data-i18n="gallery.h2">Einblicke in unseren Betrieb</h2>
+          <p class="section-sub" data-i18n="gallery.sub">Vom sortierten Palettenlager bis zum Sonderpalettenbau in Rhede.</p>
         </header>
 
         <div class="gallery reveal">
-          <figure class="gallery-item wide" data-label="Lager &amp; Logistik">
+          <figure class="gallery-item wide" data-label="Lager &amp; Logistik" data-i18n-label="g1">
             <img src="assets/img/lager-europaletten.jpg" alt="Palettenlager mit Gabelstapler bei D.J. Paletten in Rhede" loading="lazy" />
           </figure>
-          <figure class="gallery-item" data-label="Aufsatzkisten">
+          <figure class="gallery-item" data-label="Aufsatzkisten" data-i18n-label="g2">
             <img src="assets/img/lager-holzkisten.jpg" alt="Gestapelte Aufsatz- und Holzkisten" loading="lazy" />
           </figure>
-          <figure class="gallery-item" data-label="Aufsetzrahmen">
+          <figure class="gallery-item" data-label="Aufsetzrahmen" data-i18n-label="g3">
             <img src="assets/img/aufsetzrahmen.jpg" alt="Aufsetzrahmen auf einer Palette" loading="lazy" />
           </figure>
-          <figure class="gallery-item" data-label="Neue Paletten">
+          <figure class="gallery-item" data-label="Neue Paletten" data-i18n-label="g4">
             <img src="assets/img/produktion-paletten.jpg" alt="Stapel neuer Paletten im Betrieb" loading="lazy" />
           </figure>
-          <figure class="gallery-item" data-label="Sonderpaletten">
+          <figure class="gallery-item" data-label="Sonderpaletten" data-i18n-label="g5">
             <img src="assets/img/sonderpalette.jpg" alt="Kräftige Sonderpalette aus dem Palettenbau" loading="lazy" />
           </figure>
-          <figure class="gallery-item" data-label="D.J. Paletten">
+          <figure class="gallery-item" data-label="D.J. Paletten" data-i18n-label="g6">
             <img src="assets/img/dj-paletten-detail.jpg" alt="Paletten mit D.J. Paletten Kennzeichnung" loading="lazy" />
           </figure>
         </div>
@@ -198,26 +200,26 @@
           <img src="assets/img/produktion-paletten.jpg" alt="Frisch produzierte Paletten bei D.J. Paletten" loading="lazy" />
           <div class="about-badge">
             <strong>5,0 ★</strong>
-            <span>Top bewertet<br />bei Google</span>
+            <span data-i18n-html="about.badge">Top bewertet<br />bei Google</span>
           </div>
         </div>
         <div class="about-text reveal">
-          <p class="eyebrow">Über uns</p>
-          <h2>Ihr Palettenanbieter in Rhede</h2>
-          <p>
+          <p class="eyebrow" data-i18n="about.eyebrow">Über uns</p>
+          <h2 data-i18n="about.h2">Ihr Palettenanbieter in Rhede</h2>
+          <p data-i18n="about.p">
             D.J. Paletten ist ein inhabergeführtes Unternehmen aus Rhede in Westfalen.
             Wir stehen für Handel, Reparatur und Service rund um Paletten – vom An- und
             Verkauf über den Sonderpalettenbau bis zu Recycling und Entsorgung.
           </p>
           <ul class="checklist">
-            <li>Persönliche Beratung und feste Ansprechpartner</li>
-            <li>Sonderpalettenbau nach individuellem Maß</li>
-            <li>Faire, transparente Preise ohne versteckte Kosten</li>
-            <li>Nachhaltig durch Reparatur, Recycling &amp; Entsorgung</li>
+            <li data-i18n="about.li1">Persönliche Beratung und feste Ansprechpartner</li>
+            <li data-i18n="about.li2">Sonderpalettenbau nach individuellem Maß</li>
+            <li data-i18n="about.li3">Faire, transparente Preise ohne versteckte Kosten</li>
+            <li data-i18n="about.li4">Nachhaltig durch Reparatur, Recycling &amp; Entsorgung</li>
           </ul>
           <div class="about-actions">
-            <a href="#kontakt" class="btn btn-primary">Kontakt aufnehmen</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=D.J.+Paletten+Krommerter+Weg+59+Rhede" target="_blank" rel="noopener" class="btn btn-outline">Google-Bewertungen ansehen</a>
+            <a href="#kontakt" class="btn btn-primary" data-i18n="about.btnContact">Kontakt aufnehmen</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=D.J.+Paletten+Krommerter+Weg+59+Rhede" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="about.btnReviews">Google-Bewertungen ansehen</a>
           </div>
         </div>
       </div>
@@ -227,8 +229,8 @@
     <section id="standort" class="section section-alt">
       <div class="container">
         <header class="section-head reveal">
-          <p class="eyebrow">Standort</p>
-          <h2>So finden Sie uns</h2>
+          <p class="eyebrow" data-i18n="location.eyebrow">Standort</p>
+          <h2 data-i18n="location.h2">So finden Sie uns</h2>
           <p class="section-sub">Krommerter Weg 59, 46414 Rhede (Westfalen)</p>
         </header>
         <div class="map-wrap reveal">
@@ -239,7 +241,7 @@
             referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
         </div>
         <p class="map-link">
-          <a href="https://www.google.com/maps/search/?api=1&query=Krommerter+Weg+59,+46414+Rhede" target="_blank" rel="noopener">Route in Google Maps öffnen &rarr;</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Krommerter+Weg+59,+46414+Rhede" target="_blank" rel="noopener" data-i18n="location.maplink">Route in Google Maps öffnen &rarr;</a>
         </p>
       </div>
     </section>
@@ -248,22 +250,22 @@
     <section id="kontakt" class="section section-contact">
       <div class="container contact-inner">
         <div class="contact-info reveal">
-          <p class="eyebrow">Kontakt</p>
-          <h2>Angebot anfordern</h2>
-          <p>Rufen Sie uns an oder schreiben Sie uns – wir melden uns schnellstmöglich mit einem fairen Angebot zurück.</p>
+          <p class="eyebrow" data-i18n="contact.eyebrow">Kontakt</p>
+          <h2 data-i18n="contact.h2">Angebot anfordern</h2>
+          <p data-i18n="contact.p">Rufen Sie uns an oder schreiben Sie uns – wir melden uns schnellstmöglich mit einem fairen Angebot zurück.</p>
 
           <ul class="contact-list">
             <li>
               <span class="contact-ico">📞</span>
-              <span><span class="contact-label">Telefon</span><a href="tel:+4915786591425">01578 6591425</a></span>
+              <span><span class="contact-label" data-i18n="contact.tel">Telefon</span><a href="tel:+4915786591425">01578 6591425</a></span>
             </li>
             <li>
               <span class="contact-ico">✉️</span>
-              <span><span class="contact-label">E-Mail</span><a href="mailto:info@djpaletten.de">info@djpaletten.de</a></span>
+              <span><span class="contact-label" data-i18n="contact.email">E-Mail</span><a href="mailto:info@djpaletten.de">info@djpaletten.de</a></span>
             </li>
             <li>
               <span class="contact-ico">📍</span>
-              <span><span class="contact-label">Adresse</span>Krommerter Weg 59, 46414 Rhede</span>
+              <span><span class="contact-label" data-i18n="contact.addr">Adresse</span>Krommerter Weg 59, 46414 Rhede</span>
             </li>
             <li>
               <span class="contact-ico">📷</span>
@@ -274,35 +276,54 @@
 
         <form class="contact-form reveal" id="contact-form" action="https://formspree.io/f/mzdnvnoz" method="POST" novalidate>
           <div class="field">
-            <label for="name">Name *</label>
+            <label for="name" data-i18n="form.name">Name *</label>
             <input type="text" id="name" name="name" required autocomplete="name" />
           </div>
           <div class="field-row">
             <div class="field">
-              <label for="email">E-Mail *</label>
+              <label for="email" data-i18n="form.email">E-Mail *</label>
               <input type="email" id="email" name="email" required autocomplete="email" />
             </div>
             <div class="field">
-              <label for="phone">Telefon</label>
+              <label for="phone" data-i18n="form.phone">Telefon</label>
               <input type="tel" id="phone" name="phone" autocomplete="tel" />
             </div>
           </div>
-          <div class="field">
-            <label for="subject">Ich möchte …</label>
-            <select id="subject" name="subject">
-              <option value="Paletten verkaufen">Paletten verkaufen</option>
-              <option value="Paletten kaufen">Paletten kaufen</option>
-              <option value="Sonderpalette anfragen">Sonderpalette anfragen</option>
-              <option value="Entsorgung / Recycling">Entsorgung / Recycling</option>
-              <option value="Sonstiges">Sonstiges</option>
-            </select>
+          <div class="field-row">
+            <div class="field">
+              <label for="country" data-i18n="form.country">Land</label>
+              <select id="country" name="country">
+                <option value="Deutschland" selected data-i18n="c.de">Deutschland</option>
+                <option value="Österreich" data-i18n="c.at">Österreich</option>
+                <option value="Schweiz" data-i18n="c.ch">Schweiz</option>
+                <option value="Niederlande" data-i18n="c.nl">Niederlande</option>
+                <option value="Belgien" data-i18n="c.be">Belgien</option>
+                <option value="Luxemburg" data-i18n="c.lu">Luxemburg</option>
+                <option value="Frankreich" data-i18n="c.fr">Frankreich</option>
+                <option value="Polen" data-i18n="c.pl">Polen</option>
+                <option value="Dänemark" data-i18n="c.dk">Dänemark</option>
+                <option value="Tschechien" data-i18n="c.cz">Tschechien</option>
+                <option value="Italien" data-i18n="c.it">Italien</option>
+                <option value="Anderes Land" data-i18n="c.other">Anderes Land</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="subject" data-i18n="form.subject">Ich möchte …</label>
+              <select id="subject" name="subject">
+                <option value="Paletten verkaufen" data-i18n="form.opt1">Paletten verkaufen</option>
+                <option value="Paletten kaufen" data-i18n="form.opt2">Paletten kaufen</option>
+                <option value="Sonderpalette anfragen" data-i18n="form.opt3">Sonderpalette anfragen</option>
+                <option value="Entsorgung / Recycling" data-i18n="form.opt4">Entsorgung / Recycling</option>
+                <option value="Sonstiges" data-i18n="form.opt5">Sonstiges</option>
+              </select>
+            </div>
           </div>
           <div class="field">
-            <label for="message">Ihre Nachricht *</label>
-            <textarea id="message" name="message" rows="4" required placeholder="Palettenart, Menge, Zustand, Ort …"></textarea>
+            <label for="message" data-i18n="form.message">Ihre Nachricht *</label>
+            <textarea id="message" name="message" rows="4" required data-i18n-ph="form.ph" placeholder="Palettenart, Menge, Zustand, Ort …"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-block">Anfrage absenden</button>
-          <p class="form-note">* Pflichtfelder. Ihre Daten werden vertraulich behandelt (siehe <a href="datenschutz.html">Datenschutz</a>).</p>
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Anfrage absenden</button>
+          <p class="form-note" data-i18n-html="form.note">* Pflichtfelder. Ihre Daten werden vertraulich behandelt (siehe <a href="datenschutz.html">Datenschutz</a>).</p>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -312,10 +333,10 @@
     <section class="cta-band">
       <div class="container cta-inner reveal">
         <div>
-          <h2>Paletten abzugeben oder gesucht?</h2>
-          <p>Ein Anruf genügt – wir machen Ihnen ein faires Angebot.</p>
+          <h2 data-i18n="cta.h2">Paletten abzugeben oder gesucht?</h2>
+          <p data-i18n="cta.p">Ein Anruf genügt – wir machen Ihnen ein faires Angebot.</p>
         </div>
-        <a href="tel:+4915786591425" class="btn btn-primary">📞 Jetzt anrufen: 01578 6591425</a>
+        <a href="tel:+4915786591425" class="btn btn-primary" data-i18n="cta.btn">📞 Jetzt anrufen: 01578 6591425</a>
       </div>
     </section>
   </main>
@@ -326,34 +347,34 @@
       <div class="footer-brand">
         <svg class="logo-mark" viewBox="0 0 64 48" role="img" aria-hidden="true" focusable="false">
           <path d="M7 13 L55 7 L55 17 L7 23 Z" fill="#c8a267" />
-          <path d="M7 24 L55 24 L55 32 L7 32 Z" fill="#9a6a34" />
-          <rect x="8" y="32" width="9" height="10" fill="#6e4620" />
-          <rect x="27" y="32" width="9" height="10" fill="#6e4620" />
-          <rect x="46" y="32" width="9" height="10" fill="#6e4620" />
+          <path d="M7 24 L55 24 L55 32 L7 32 Z" fill="#c8a267" />
+          <rect x="8" y="32" width="9" height="10" fill="#c8a267" />
+          <rect x="27" y="32" width="9" height="10" fill="#c8a267" />
+          <rect x="46" y="32" width="9" height="10" fill="#c8a267" />
         </svg>
         <div>
           <p class="footer-name">D.J. Paletten</p>
-          <p>Handel · Reparatur · Service rund um Paletten in Rhede. An- &amp; Verkauf, Sonderpalettenbau, Recycling und Entsorgung.</p>
+          <p data-i18n="footer.desc">Handel · Reparatur · Service rund um Paletten in Rhede. An- &amp; Verkauf, Sonderpalettenbau, Recycling und Entsorgung.</p>
         </div>
       </div>
       <nav class="footer-nav" aria-label="Footer-Navigation">
-        <span class="footer-h">Seite</span>
-        <a href="#leistungen">Leistungen</a>
-        <a href="#galerie">Galerie</a>
-        <a href="#ueber-uns">Über uns</a>
-        <a href="#standort">Standort</a>
-        <a href="#kontakt">Kontakt</a>
+        <span class="footer-h" data-i18n="footer.site">Seite</span>
+        <a href="#leistungen" data-i18n="nav.services">Leistungen</a>
+        <a href="#galerie" data-i18n="nav.gallery">Galerie</a>
+        <a href="#ueber-uns" data-i18n="nav.about">Über uns</a>
+        <a href="#standort" data-i18n="nav.location">Standort</a>
+        <a href="#kontakt" data-i18n="contact.eyebrow">Kontakt</a>
       </nav>
       <div class="footer-contact">
-        <span class="footer-h">Kontakt</span>
+        <span class="footer-h" data-i18n="contact.eyebrow">Kontakt</span>
         <a href="tel:+4915786591425">01578 6591425</a>
         <a href="mailto:info@djpaletten.de">info@djpaletten.de</a>
         <span>Krommerter Weg 59<br />46414 Rhede</span>
       </div>
     </div>
     <div class="container footer-legal">
-      <p>&copy; <span id="year"></span> D.J. Paletten, Rhede. Alle Rechte vorbehalten.</p>
-      <p><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+      <p>&copy; <span id="year"></span> D.J. Paletten, Rhede. <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span></p>
+      <p><a href="impressum.html" data-i18n="footer.imprint">Impressum</a> · <a href="datenschutz.html" data-i18n="footer.privacy">Datenschutz</a></p>
     </div>
   </footer>
 
