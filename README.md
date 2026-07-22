@@ -37,37 +37,29 @@ Vor dem Live-Gang bitte die Platzhalter ersetzen:
 
 | Stelle | Was anpassen |
 |--------|--------------|
-| `impressum.html` / `datenschutz.html` | Mit `[…]` markierte Angaben ergänzen – v. a. **Name der Inhaberin/​des Inhabers** (Pflicht) |
-| `index.html` – Kontaktformular | Formspree-Endpoint aktivieren (siehe unten) |
+| `impressum.html` | Umsatzsteuer-ID eintragen, falls vorhanden – sonst den Abschnitt entfernen |
 | `index.html` – Kontakt | Öffnungszeiten ergänzen, sobald bekannt |
 
-Telefon, E-Mail, Adresse, Instagram, Logo, Fotos und die Google-Bewertung sind bereits
-mit den echten Daten eingetragen.
+Inhaberin (Jordanka Ristoski), Telefon, E-Mail, Adresse, Instagram, Logo, Fotos, die
+Google-Bewertung und der Formspree-Endpoint sind bereits eingetragen.
 
 Farben zentral über die CSS-Variablen in `:root` (`css/style.css`):
 Anthrazit (`--charcoal`), Gold (`--gold`) und Holztöne (`--wood`).
 
-## Kontaktformular aktivieren (Formspree)
+## Kontaktformular (Formspree)
 
-Das Formular verschickt Anfragen ohne eigenen Server über den kostenlosen Dienst
-[Formspree](https://formspree.io). Aktivierung (einmalig, ~2 Min.):
-
-1. Kostenloses Konto auf formspree.io anlegen und ein neues Formular erstellen
-   (Zieladresse: `info@djpaletten.de`).
-2. Man erhält einen Endpoint wie `https://formspree.io/f/abcdwxyz`.
-3. In `index.html` im `<form … action="https://formspree.io/f/xxxxxxxx">` das
-   `xxxxxxxx` durch die echte Form-ID ersetzen.
-
-Solange dort noch `xxxxxxxx` steht, öffnet das Formular als Rückfallebene das
-E-Mail-Programm des Besuchers (Mail an `info@djpaletten.de`). Sobald ein echter
-Endpoint eingetragen ist, wird direkt und ohne Seitenwechsel versendet.
+Das Formular verschickt Anfragen ohne eigenen Server über [Formspree](https://formspree.io).
+Der Endpoint `https://formspree.io/f/mzdnvnoz` ist bereits in `index.html` eingetragen;
+`js/main.js` sendet die Anfrage per AJAX (ohne Seitenwechsel) und zeigt eine
+Erfolgs- bzw. Fehlermeldung. Beim **ersten Absenden** verlangt Formspree einmalig eine
+Bestätigung der Zieladresse `info@djpaletten.de` per E-Mail.
 
 ## Rechtsseiten
 
-`impressum.html` und `datenschutz.html` sind angelegt und im Footer verlinkt. Die
-Datenschutzerklärung deckt Hosting (GitHub Pages), das Kontaktformular (Formspree)
-und die Google-Maps-Karte ab. **Vor dem Live-Gang** die `[…]`-Platzhalter ausfüllen;
-bei rechtlicher Unsicherheit anwaltlich prüfen lassen.
+`impressum.html` und `datenschutz.html` sind angelegt und im Footer verlinkt, mit der
+Inhaberin Jordanka Ristoski. Die Datenschutzerklärung deckt Hosting (GitHub Pages),
+das Kontaktformular (Formspree) und die Google-Maps-Karte ab. Bei rechtlicher
+Unsicherheit anwaltlich prüfen lassen.
 
 ## GitHub Pages
 
