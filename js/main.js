@@ -2,11 +2,9 @@
 (function () {
   "use strict";
 
-  // Empfaenger-Adresse fuer das Kontaktformular.
-  // Sobald eine Firmen-E-Mail vorliegt, hier eintragen (z. B. "info@dj-paletten.de").
-  // Bleibt das Feld leer, verweist das Formular auf die Telefonnummer.
-  var RECIPIENT = "";
-  var PHONE = "0178 6591425";
+  // Empfaenger-Adresse fuer das Kontaktformular (von der Visitenkarte).
+  var RECIPIENT = "info@djpaletten.de";
+  var PHONE = "01578 6591425";
 
   // Aktuelles Jahr im Footer
   var yearEl = document.getElementById("year");
@@ -22,8 +20,6 @@
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", open ? "Menü schließen" : "Menü öffnen");
     });
-
-    // Menü nach Klick auf einen Link schließen
     navList.addEventListener("click", function (e) {
       if (e.target.tagName === "A") {
         navList.classList.remove("open");
@@ -31,6 +27,16 @@
       }
     });
   }
+
+  // Galerie: fehlt ein Foto, zeigen wir einen dezenten Platzhalter statt eines kaputten Bildes.
+  var galleryImgs = document.querySelectorAll(".gallery-item img");
+  Array.prototype.forEach.call(galleryImgs, function (img) {
+    img.addEventListener("error", function () {
+      var fig = img.closest(".gallery-item");
+      if (fig) fig.classList.add("img-missing");
+      img.style.display = "none";
+    });
+  });
 
   // Kontaktformular – clientseitige Validierung + Feedback
   var form = document.getElementById("contact-form");
@@ -50,16 +56,11 @@
         return;
       }
 
-      // Ohne hinterlegte E-Mail: freundlicher Hinweis auf den Telefonkontakt.
       if (!RECIPIENT) {
-        setStatus(
-          "Vielen Dank! Bitte rufen Sie uns für Ihre Anfrage unter " + PHONE + " an.",
-          "ok"
-        );
+        setStatus("Vielen Dank! Bitte rufen Sie uns unter " + PHONE + " an.", "ok");
         return;
       }
 
-      // mailto-Fallback ohne Backend, damit die Anfrage versendet werden kann.
       var subject = encodeURIComponent("Anfrage über die Webseite: " + form.subject.value);
       var body = encodeURIComponent(
         "Name: " + name + "\n" +

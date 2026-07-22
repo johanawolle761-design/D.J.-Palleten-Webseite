@@ -1,12 +1,16 @@
 # D.J. Paletten – Webseite
 
 Moderne, responsive Single-Page-Webseite für **D.J. Paletten** in Rhede
-(Handel, An- & Verkauf, Recycling, Sonderpalettenbau, Service und Entsorgung).
+(Handel, Reparatur und Service rund um Paletten).
 
-Verifizierte Firmendaten (Stand: Google-Eintrag):
+Design im Markenlook: Anthrazit, Gold/Beige und Holztöne (nach Logo und Visitenkarte).
+
+Verifizierte Firmendaten (Quelle: Visitenkarte / Google-Eintrag):
 
 - Adresse: Krommerter Weg 59, 46414 Rhede (Westfalen)
-- Telefon: 0178 6591425
+- Telefon: 01578 6591425
+- E-Mail: info@djpaletten.de
+- Web: www.djpaletten.de
 - Instagram: [@paletten_liebe_](https://www.instagram.com/paletten_liebe_/)
 - Bewertung: 5,0 Sterne bei Google (11 Rezensionen)
 
@@ -34,12 +38,14 @@ Vor dem Live-Gang bitte die Platzhalter ersetzen:
 | Stelle | Was anpassen |
 |--------|--------------|
 | `index.html` – Footer | Impressum- und Datenschutz-Links (rechtlich Pflicht) |
-| `js/main.js` | `RECIPIENT` mit der Firmen-E-Mail füllen. Solange leer, verweist das Formular auf die Telefonnummer. |
+| `assets/img/` | Echte Fotos hochladen, siehe `assets/img/NAMING.md` |
 | `index.html` – Kontakt | Öffnungszeiten ergänzen, sobald bekannt |
 
-Telefon, Adresse, Instagram und die Google-Bewertung sind bereits mit den echten Daten eingetragen.
+Telefon, E-Mail, Adresse, Instagram und die Google-Bewertung sind bereits mit den
+echten Daten eingetragen. Das Kontaktformular sendet an `info@djpaletten.de`.
 
-Farben lassen sich zentral über die CSS-Variablen in `:root` (in `css/style.css`) ändern.
+Farben zentral über die CSS-Variablen in `:root` (`css/style.css`):
+Anthrazit (`--charcoal`), Gold (`--gold`) und Holztöne (`--wood`).
 
 ## GitHub Pages
 
