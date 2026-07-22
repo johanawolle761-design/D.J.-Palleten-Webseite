@@ -33,6 +33,23 @@ Vor dem Live-Gang bitte die Platzhalter ersetzen:
 
 Farben lassen sich zentral über die CSS-Variablen in `:root` (in `css/style.css`) ändern.
 
+## GitHub Pages
+
+Die Seite ist für GitHub Pages vorbereitet:
+
+- `index.html` liegt im Root, alle Pfade sind relativ.
+- `.nojekyll` verhindert die Jekyll-Verarbeitung.
+- Der Workflow `.github/workflows/deploy.yml` veröffentlicht die Seite automatisch.
+
+**Einmalige Aktivierung im Repository:**
+
+1. In GitHub auf **Settings → Pages** gehen.
+2. Unter **Build and deployment → Source** die Option **GitHub Actions** wählen.
+3. Beim nächsten Push (oder manuell über **Actions → Deploy to GitHub Pages → Run workflow**)
+   wird die Seite gebaut und veröffentlicht.
+
+Die öffentliche URL erscheint danach unter **Settings → Pages** sowie im Actions-Log.
+
 ## Hinweise
 
 - Das Kontaktformular nutzt ohne Backend einen `mailto:`-Fallback. Für automatischen
