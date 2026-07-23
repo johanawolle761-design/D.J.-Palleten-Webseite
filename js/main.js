@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  var PHONE = "01578 6591425";
+  var PHONE = "0178 6591425";
   var RECIPIENT = "info@djpaletten.de";
 
   /* ---------------- Übersetzungen ---------------- */
@@ -123,7 +123,7 @@
 
     "cta.h2": ["Paletten abzugeben oder gesucht?", "Pallets to sell or looking to buy?"],
     "cta.p": ["Ein Anruf genügt – wir machen Ihnen ein faires Angebot.", "One call is enough – we'll make you a fair offer."],
-    "cta.btn": ["📞 Jetzt anrufen: 01578 6591425", "📞 Call now: 01578 6591425"],
+    "cta.btn": ["📞 Jetzt anrufen: 0178 6591425", "📞 Call now: 0178 6591425"],
 
     "footer.desc": ["Handel · Reparatur · Service rund um Paletten in Rhede. An- & Verkauf, Sonderpalettenbau, Recycling und Entsorgung.",
       "Trade · Repair · Service around pallets in Rhede. Buying & selling, custom pallet construction, recycling and disposal."],
@@ -145,8 +145,8 @@
     "imp.address": ["D.J. Paletten<br />Inhaberin: Jordanka Ristoski<br />Krommerter Weg 59<br />46414 Rhede (Westfalen)<br />Deutschland",
       "D.J. Paletten<br />Owner: Jordanka Ristoski<br />Krommerter Weg 59<br />46414 Rhede (Westphalia)<br />Germany"],
     "imp.h.kontakt": ["Kontakt", "Contact"],
-    "imp.contact": ["Telefon: <a href=\"tel:+4915786591425\">01578 6591425</a><br />E-Mail: <a href=\"mailto:info@djpaletten.de\">info@djpaletten.de</a>",
-      "Phone: <a href=\"tel:+4915786591425\">01578 6591425</a><br />Email: <a href=\"mailto:info@djpaletten.de\">info@djpaletten.de</a>"],
+    "imp.contact": ["Telefon: <a href=\"tel:+491786591425\">0178 6591425</a><br />E-Mail: <a href=\"mailto:info@djpaletten.de\">info@djpaletten.de</a>",
+      "Phone: <a href=\"tel:+491786591425\">0178 6591425</a><br />Email: <a href=\"mailto:info@djpaletten.de\">info@djpaletten.de</a>"],
     "imp.h.ust": ["Umsatzsteuer", "VAT"],
     "imp.ust": ["Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: <strong>[falls vorhanden, hier eintragen – sonst diesen Abschnitt entfernen]</strong>",
       "VAT identification number pursuant to § 27a of the German VAT Act: <strong>[enter here if available – otherwise remove this section]</strong>"],
@@ -170,8 +170,8 @@
     "ds.note": ["Hinweis für den Betreiber: Diese Erklärung deckt die aktuell auf der Seite eingesetzten Dienste ab (Hosting, Google-Maps-Karte). Bei rechtlicher Unsicherheit empfiehlt sich eine anwaltliche Prüfung.",
       "Note for the operator: This policy covers the services currently used on the site (hosting, Google Maps). If in doubt legally, a review by a lawyer is recommended."],
     "ds.h1": ["1. Verantwortlicher", "1. Controller"],
-    "ds.p1": ["Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br />D.J. Paletten, Inhaberin Jordanka Ristoski<br />Krommerter Weg 59, 46414 Rhede<br />Telefon: <a href=\"tel:+4915786591425\">01578 6591425</a> · E-Mail: <a href=\"mailto:info@djpaletten.de\">info@djpaletten.de</a>",
-      "Responsible for data processing on this website is:<br />D.J. Paletten, owner Jordanka Ristoski<br />Krommerter Weg 59, 46414 Rhede<br />Phone: <a href=\"tel:+4915786591425\">01578 6591425</a> · Email: <a href=\"mailto:info@djpaletten.de\">info@djpaletten.de</a>"],
+    "ds.p1": ["Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br />D.J. Paletten, Inhaberin Jordanka Ristoski<br />Krommerter Weg 59, 46414 Rhede<br />Telefon: <a href=\"tel:+491786591425\">0178 6591425</a> · E-Mail: <a href=\"mailto:info@djpaletten.de\">info@djpaletten.de</a>",
+      "Responsible for data processing on this website is:<br />D.J. Paletten, owner Jordanka Ristoski<br />Krommerter Weg 59, 46414 Rhede<br />Phone: <a href=\"tel:+491786591425\">0178 6591425</a> · Email: <a href=\"mailto:info@djpaletten.de\">info@djpaletten.de</a>"],
     "ds.h2": ["2. Allgemeines zur Datenverarbeitung", "2. General information on data processing"],
     "ds.p2": ["Wir verarbeiten personenbezogene Daten unserer Nutzer grundsätzlich nur, soweit dies zur Bereitstellung einer funktionsfähigen Website sowie unserer Inhalte und Leistungen erforderlich ist oder Sie eingewilligt haben. Rechtsgrundlagen sind insbesondere Art. 6 Abs. 1 DSGVO.",
       "We generally only process our users' personal data to the extent necessary to provide a functioning website and our content and services, or where you have given your consent. The legal bases are in particular Art. 6 (1) GDPR."],

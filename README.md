@@ -8,7 +8,7 @@ Design im Markenlook: Anthrazit, Gold/Beige und Holztöne (nach Logo und Visiten
 Verifizierte Firmendaten (Quelle: Visitenkarte / Google-Eintrag):
 
 - Adresse: Krommerter Weg 59, 46414 Rhede (Westfalen)
-- Telefon: 01578 6591425
+- Telefon: 0178 6591425
 - E-Mail: info@djpaletten.de
 - Web: www.djpaletten.de
 - Instagram: [@paletten_liebe_](https://www.instagram.com/paletten_liebe_/)
