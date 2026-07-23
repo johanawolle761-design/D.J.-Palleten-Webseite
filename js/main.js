@@ -85,9 +85,9 @@
     "location.maplink": ["Route in Google Maps öffnen →", "Open route in Google Maps →"],
 
     "contact.eyebrow": ["Kontakt", "Contact"],
-    "contact.h2": ["Angebot anfordern", "Request a quote"],
-    "contact.p": ["Rufen Sie uns an oder schreiben Sie uns – wir melden uns schnellstmöglich mit einem fairen Angebot zurück.",
-      "Call us or send us a message – we'll get back to you as soon as possible with a fair offer."],
+    "contact.h2": ["Kontakt aufnehmen", "Get in touch"],
+    "contact.p": ["Rufen Sie uns an oder schreiben Sie uns eine E-Mail – wir melden uns schnellstmöglich mit einem fairen Angebot.",
+      "Call us or send us an email – we'll get back to you as soon as possible with a fair offer."],
     "contact.tel": ["Telefon", "Phone"],
     "contact.email": ["E-Mail", "Email"],
     "contact.addr": ["Adresse", "Address"],
@@ -167,8 +167,8 @@
 
     // ---- Datenschutz ----
     "ds.title": ["Datenschutzerklärung", "Privacy Policy"],
-    "ds.note": ["Hinweis für den Betreiber: Diese Erklärung deckt die aktuell auf der Seite eingesetzten Dienste ab (Hosting, Kontaktformular über Formspree, Google-Maps-Karte). Bei rechtlicher Unsicherheit empfiehlt sich eine anwaltliche Prüfung.",
-      "Note for the operator: This policy covers the services currently used on the site (hosting, contact form via Formspree, Google Maps). If in doubt legally, a review by a lawyer is recommended."],
+    "ds.note": ["Hinweis für den Betreiber: Diese Erklärung deckt die aktuell auf der Seite eingesetzten Dienste ab (Hosting, Google-Maps-Karte). Bei rechtlicher Unsicherheit empfiehlt sich eine anwaltliche Prüfung.",
+      "Note for the operator: This policy covers the services currently used on the site (hosting, Google Maps). If in doubt legally, a review by a lawyer is recommended."],
     "ds.h1": ["1. Verantwortlicher", "1. Controller"],
     "ds.p1": ["Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br />D.J. Paletten, Inhaberin Jordanka Ristoski<br />Krommerter Weg 59, 46414 Rhede<br />Telefon: <a href=\"tel:+4915786591425\">01578 6591425</a> · E-Mail: <a href=\"mailto:info@djpaletten.de\">info@djpaletten.de</a>",
       "Responsible for data processing on this website is:<br />D.J. Paletten, owner Jordanka Ristoski<br />Krommerter Weg 59, 46414 Rhede<br />Phone: <a href=\"tel:+4915786591425\">01578 6591425</a> · Email: <a href=\"mailto:info@djpaletten.de\">info@djpaletten.de</a>"],
@@ -179,6 +179,8 @@
     "ds.p3": ["Diese Website wird bei GitHub Pages gehostet (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). Beim Aufruf der Seite werden durch den Hoster technisch notwendige Zugriffsdaten (z. B. IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browsertyp) in Server-Logfiles verarbeitet. Rechtsgrundlage ist unser berechtigtes Interesse an einer sicheren und stabilen Bereitstellung (Art. 6 Abs. 1 lit. f DSGVO).",
       "This website is hosted by GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). When the page is accessed, the host processes technically necessary access data (e.g. IP address, date and time, page accessed, browser type) in server log files. The legal basis is our legitimate interest in a secure and stable provision (Art. 6 (1) (f) GDPR)."],
     "ds.h4": ["4. Kontaktaufnahme", "4. Contact"],
+    "ds.p4": ["Bei Kontaktaufnahme per Telefon oder E-Mail verarbeiten wir Ihre Angaben ausschließlich zur Bearbeitung Ihres Anliegens (Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO). Ein Kontaktformular setzen wir nicht ein.",
+      "If you contact us by phone or email, we process your details exclusively to handle your request (Art. 6 (1) (b) or (f) GDPR). We do not use a contact form."],
     "ds.h4a": ["a) Kontaktformular (Formspree)", "a) Contact form (Formspree)"],
     "ds.p4a": ["Wenn Sie uns über das Kontaktformular eine Anfrage senden, werden die von Ihnen eingegebenen Daten (Name, E-Mail-Adresse, ggf. Telefonnummer, Land, Anliegen und Nachricht) an uns übermittelt. Für den Versand nutzen wir den Dienst Formspree (Formspree, Inc., USA). Formspree verarbeitet die Formulardaten in unserem Auftrag und leitet sie per E-Mail an uns weiter. Dabei kann eine Übermittlung in die USA erfolgen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b und lit. f DSGVO. Die Daten werden zur Bearbeitung Ihrer Anfrage gespeichert und gelöscht, sobald sie nicht mehr benötigt werden.",
       "When you send us an enquiry via the contact form, the data you enter (name, email address, phone number if provided, country, subject and message) is transmitted to us. For sending we use the service Formspree (Formspree, Inc., USA). Formspree processes the form data on our behalf and forwards it to us by email. This may involve a transfer to the USA. The legal basis is Art. 6 (1) (b) and (f) GDPR. The data is stored to process your enquiry and deleted as soon as it is no longer required."],
@@ -322,54 +324,4 @@
     });
   });
 
-  /* ---------------- Kontaktformular ---------------- */
-  var form = document.getElementById("contact-form");
-  var status = document.getElementById("form-status");
-  function setStatus(key, type) {
-    if (!status) return;
-    status.textContent = t(key);
-    status.className = "form-status show " + type;
-  }
-
-  if (form) {
-    var action = form.getAttribute("action") || "";
-    var formspreeReady = action.indexOf("formspree.io") !== -1 && action.indexOf("xxxxxxxx") === -1;
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var name = form.name.value.trim();
-      var email = form.email.value.trim();
-      var message = form.message.value.trim();
-      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-      if (!name || !emailOk || !message) { setStatus("msg.required", "err"); return; }
-
-      if (formspreeReady) {
-        var btn = form.querySelector('button[type="submit"]');
-        var btnLabel = btn ? btn.textContent : "";
-        if (btn) { btn.disabled = true; btn.textContent = t("msg.sending"); }
-        fetch(action, { method: "POST", body: new FormData(form), headers: { "Accept": "application/json" } })
-          .then(function (res) {
-            if (res.ok) { form.reset(); setStatus("msg.ok", "ok"); }
-            else {
-              res.json().then(function (data) {
-                if (data && data.errors && data.errors.length) {
-                  status.textContent = data.errors.map(function (x) { return x.message; }).join(" ");
-                  status.className = "form-status show err";
-                } else { setStatus("msg.fail", "err"); }
-              }).catch(function () { setStatus("msg.fail", "err"); });
-            }
-          })
-          .catch(function () { setStatus("msg.fail", "err"); })
-          .finally(function () { if (btn) { btn.disabled = false; btn.textContent = btnLabel || t("form.submit"); } });
-      } else {
-        var subject = encodeURIComponent("Anfrage über die Webseite: " + form.subject.value);
-        var body = encodeURIComponent(
-          "Name: " + name + "\nE-Mail: " + email + "\nTelefon: " + form.phone.value.trim() +
-          "\nLand: " + form.country.value + "\nAnliegen: " + form.subject.value + "\n\n" + message);
-        setStatus("msg.mailto", "ok");
-        window.location.href = "mailto:" + RECIPIENT + "?subject=" + subject + "&body=" + body;
-      }
-    });
-  }
 })();

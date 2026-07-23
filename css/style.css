@@ -84,12 +84,11 @@ h3 { font-weight: 600; }
 /* ---------- Header ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(27, 26, 22, 0.86);
-  backdrop-filter: saturate(160%) blur(12px);
+  background: #2c292a; /* exakt die Hintergrundfarbe des Logos – kein sichtbarer Kasten */
   border-bottom: 1px solid rgba(200, 162, 103, 0.14);
-  transition: background .3s ease, box-shadow .3s ease;
+  transition: box-shadow .3s ease;
 }
-.site-header.scrolled { background: rgba(23, 22, 18, 0.97); box-shadow: 0 8px 30px rgba(0,0,0,.28); }
+.site-header.scrolled { background: #2c292a; box-shadow: 0 8px 30px rgba(0,0,0,.28); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 82px; }
 
 .logo { display: flex; align-items: center; gap: .7rem; color: #fff; }
@@ -256,6 +255,13 @@ h3 { font-weight: 600; }
 .form-status.show { display: block; }
 .form-status.ok { color: #2f6b3f; background: #e7f3ea; }
 .form-status.err { color: #9c2f24; background: #fbe9e6; }
+
+/* ---------- Kontakt ohne Formular ---------- */
+.contact-simple { max-width: 760px; margin-inline: auto; text-align: center; }
+.contact-intro { color: #d7d0c4; font-size: 1.1rem; max-width: 54ch; margin: 0 auto; }
+.contact-actions { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 1.9rem 0 2.2rem; }
+.contact-list-center { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem 2.4rem; margin: 0; }
+.contact-list-center li { margin: 0; text-align: left; }
 
 /* ---------- CTA-Band ---------- */
 .cta-band { background: linear-gradient(120deg, var(--gold-dark), var(--gold)); color: var(--charcoal); }
