@@ -258,10 +258,14 @@
   var logoImg = document.querySelector(".logo-img");
   var logoFallback = document.querySelector(".logo-fallback");
   if (logoImg && logoFallback) {
-    logoImg.addEventListener("load", function () {
-      logoImg.style.display = "block"; logoFallback.style.display = "none";
-    });
-    logoImg.addEventListener("error", function () { logoImg.remove(); });
+    var showLogoImg = function () { logoImg.style.display = "block"; logoFallback.style.display = "none"; };
+    if (logoImg.complete) {
+      // Bild bereits geladen (z. B. aus dem Cache) – load-Event feuert dann nicht mehr.
+      if (logoImg.naturalWidth > 0) showLogoImg(); else logoImg.remove();
+    } else {
+      logoImg.addEventListener("load", showLogoImg);
+      logoImg.addEventListener("error", function () { logoImg.remove(); });
+    }
   }
 
   /* ---------------- Mobile-Navigation ---------------- */
