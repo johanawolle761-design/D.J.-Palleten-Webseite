@@ -324,4 +324,25 @@
     });
   });
 
+  /* ---------------- Google-Maps erst laden, wenn sichtbar ---------------- */
+  /* Verhindert, dass das eingebettete Maps beim Laden den Fokus greift und
+     die Seite (v. a. auf dem Handy) direkt zum Standort scrollt. */
+  var mapFrame = document.querySelector(".map-wrap iframe[data-src]");
+  if (mapFrame) {
+    var loadMap = function () {
+      if (!mapFrame.src) mapFrame.src = mapFrame.getAttribute("data-src");
+    };
+    if ("IntersectionObserver" in window) {
+      var mo = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { loadMap(); mo.disconnect(); }
+        });
+      }, { rootMargin: "250px" });
+      mo.observe(mapFrame);
+    } else {
+      // Fallback: erst nach vollständigem Laden der Seite nachladen.
+      window.addEventListener("load", loadMap);
+    }
+  }
+
 })();
